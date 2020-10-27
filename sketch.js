@@ -3,7 +3,7 @@ var back_img;
 var gameState =0;
 var playerCount = 0;
 var allPlayers;
-var basket,basketImg
+
 var player, form,game;
 var player1,player2;
 var players;
@@ -11,7 +11,6 @@ var fruits;
 var fruitGroup;
 var fruit1_img, fruit2_img, fruit3_img, fruit4_img, fruit5_img;
 var player_img;
-var fruit1,fruit2,fruit3,fruit4,fruit5;
 
 
 function preload(){
@@ -22,7 +21,6 @@ function preload(){
   fruit3_img = loadImage("images/melon2.png");
   fruit4_img = loadImage("images/orange2.png");
   fruit5_img = loadImage("images/pineapple2.png");
-  basketImg=loadImage("images/basket2.png")
   fruitGroup = new Group();
 }
 function setup() {
@@ -31,17 +29,7 @@ function setup() {
   game = new Game();
   game.getState();
   game.start();
-  fruit1.addImage(fruit1_img)
-  fruit2.addImage(fruit2_img)
-  fruit3.addImage(fruit3_img)
-  fruit4.addImage(fruit4_img)
-  fruit5.addImage(fruit5_img)
-  fruit1 = createSprite(rand(120-500),0,20,20)
-  fruit2 = createSprite(rand(120-500),0,20,20)
-  fruit3 = createSprite(rand(120-500),0,20,20)
-  fruit4 = createSprite(rand(120-500),0,20,20)
-  fruit5 = createSprite(rand(120-500),0,20,20)
-  basket = createSprite(mouseX,950,20,20)
+  
 }
 
 function draw() {
@@ -58,5 +46,4 @@ function draw() {
     
      game.end();
    }
-   drawSprites();
 }
